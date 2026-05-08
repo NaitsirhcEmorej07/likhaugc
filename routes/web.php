@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CreatorProfileController;
 use App\Http\Controllers\ExtractClientDataController;
+use App\Http\Controllers\CampaignFreePortfolioController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -38,5 +39,21 @@ Route::view('/support-us', 'support-us')
     ->name('support-us');
 
 
+
 Route::get('/extract-client-data/{token}', [ExtractClientDataController::class, 'index'])
     ->name('extract-client-data');
+
+
+
+// campaign 
+Route::get('/campaign-free-portfolio',
+[
+    CampaignFreePortfolioController::class,
+    'index'
+])->name('campaign.free.portfolio');
+
+Route::post('/campaign-free-portfolio/store',
+[
+    CampaignFreePortfolioController::class,
+    'store'
+])->name('campaign.free.portfolio.store');
