@@ -46,10 +46,10 @@
                         <div>
 
                             <label class="block text-sm font-semibold text-gray-700 mb-2">
-                                Username
+                                Display Name/Username
                             </label>
 
-                            <input type="text" name="username" placeholder="@yourusername"
+                            <input type="text" name="username" 
                                 class="w-full rounded-xl border border-gray-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-400">
 
                         </div>
